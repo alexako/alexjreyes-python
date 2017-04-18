@@ -12,8 +12,8 @@ def index():
 def page_not_found(error):
     return render_template('page_not_found.html'), 404
 
-def main():
-    app.run(debug=True)
+def main(debug):
+    app.run(debug=debug)
 
 if __name__ == '__main__':
-    main()
+    main(True)
