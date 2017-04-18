@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alexako</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}"/>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </head>
+    <body>
+        <p>Hello, there!</p>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
