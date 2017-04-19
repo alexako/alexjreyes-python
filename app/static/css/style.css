@@ -1,3 +1,40 @@
-p {
-    color: blue;
+body {
+    /* Title font */
+    font-family: 'Libre Franklin', sans-serif;
+
+    /* Main font */
+    font-family: 'Raleway', sans-serif;
+    color: limegreen;
+    background-color: #1e1e20;
+    width: 100%;
+
+    text-decoration: none;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.nav {
+    margin: 0 auto;
+}
+
+.intro {
+    font-size: 2.5em;
+    /*
+    width: 700px;
+    margin: 0 auto;
+    */
+}
+
+span {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: snow;
+}
+
+footer {
+    width: 163px;
+    margin: 0 auto;
 }
