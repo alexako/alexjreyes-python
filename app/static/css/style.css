@@ -1,3 +1,6 @@
+/* TODO: Vertically align for table portrait and landscape */
+/* TODO: Add down arrow for portfolio section */
+
 body {
     /* Title font */
     font-family: 'Libre Franklin', sans-serif;
@@ -91,7 +94,7 @@ footer p {
     .container {
         width: 80%;
     }
-    .intro {
+    .intro p {
         margin: 22% auto 0 auto;
         width: 632px;
     }
