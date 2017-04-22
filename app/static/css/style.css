@@ -46,14 +46,27 @@ a:visited {
     text-align: center;
 }
 .contact a {
-    margin: 0 12px;
+    margin: 0 2px;
 }
 
 footer {
+    font-size: 1.1em;
     position: absolute;
     bottom: 0;
+    /*
     left: 40%;
-    font-size: 1.1em;
     width: 183px;
     margin: 0 auto;
+    */
+    left: 0;
+    width: 100%;
+}
+footer p {
+    text-align: center;
+}
+
+@media screen and (min-width: 28.75em) {
+    .contact a {
+        margin: 0 12px;
+    }
 }
