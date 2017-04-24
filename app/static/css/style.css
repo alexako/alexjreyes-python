@@ -1,4 +1,3 @@
-/* TODO: Vertically align for table portrait and landscape */
 /* TODO: Add down arrow for portfolio section */
 
 body {
@@ -64,20 +63,12 @@ footer p {
     .container {
         width: 80%;
     }
-}
-
-@media screen
-  and (min-width: 480px)
-  and (device-width: 360px)
-  and (device-height: 640px)
-  and (-webkit-device-pixel-ratio: 3)
-  and (orientation: landscape) {
     .intro {
-        margin: 22% auto 1% auto;
+        width: 88%;
+        margin: 7% auto 1% auto;
     }
-
-
 }
+
 
 @media screen and (min-width: 768px) {
     h1 {
