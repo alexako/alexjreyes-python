@@ -45,6 +45,8 @@ a:hover {
 }
  .contact a {
     margin: 0 1%;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 
 footer {
