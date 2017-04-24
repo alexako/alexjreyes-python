@@ -20,11 +20,8 @@ a {
     color: limegreen;
     text-decoration: none;
 }
-a:active, a:hover {
+a:hover {
     color: dodgerblue;
-}
-a:visited {
-    color: #2bb32b;
 }
 
 .container {
@@ -45,8 +42,8 @@ a:visited {
     text-align: center;
     padding-top: 4px;
 }
-.contact a {
-    margin: 0 2px;
+ .contact a {
+    margin: 0 1%;
 }
 
 footer {
@@ -71,9 +68,6 @@ footer p {
         margin: 22% auto 1% auto;
     }
 
-    .contact a {
-        margin: 0 1%;
-    }
 
 }
 
