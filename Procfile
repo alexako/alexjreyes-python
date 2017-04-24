@@ -1,1 +1,1 @@
-web gunicorn "app.app:main(False)"
+web gunicorn app:app
