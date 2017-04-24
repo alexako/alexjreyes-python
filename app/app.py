@@ -13,7 +13,7 @@ def page_not_found(error):
     return render_template('page_not_found.html'), 404
 
 def main(debug):
-    app.run(debug=debug)
+    app.run('0.0.0.0', debug=debug)
 
 if __name__ == '__main__':
-    main(True)
+    main('localhost', True)
