@@ -79,12 +79,6 @@ footer p {
 
 }
 
-@media screen and (min-width: 600px) {
-    .intro {
-        margin: 50% auto 1% auto;
-    }
-}
-
 @media screen and (min-width: 768px) {
     h1 {
         font-size: 2.5em;
