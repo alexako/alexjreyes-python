@@ -59,7 +59,7 @@ footer p {
     text-align: center;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 480px) {
     .container {
         width: 80%;
     }
@@ -76,7 +76,7 @@ footer p {
     }
 
     .intro {
-        margin: 22% auto 1% auto;
+        margin: 10% auto 1% auto;
         text-align: center;
     }
 
