@@ -7,6 +7,7 @@ body {
 
     /* Main font */
     font-family: 'Raleway', sans-serif;
+
     font-size: 16px;
     color: limegreen;
     background-color: #1e1e20;
@@ -32,19 +33,11 @@ a:visited {
     margin: 0 auto;
 }
 
-.nav {
-    margin: 0 auto;
-}
-
 .intro {
-    font-size: 2.5em;
-}
-.intro p {
-    margin: 5px;
+    width: 100%;
+    margin: 50% auto 1% auto;
 }
 .intro span {
-    font-size: 1.1em;
-    font-weight: 600;
     color: snow;
 }
 
@@ -60,11 +53,6 @@ footer {
     font-size: 1.1em;
     position: absolute;
     bottom: 0;
-    /*
-    left: 40%;
-    width: 183px;
-    margin: 0 auto;
-    */
     left: 0;
     width: 100%;
 }
@@ -72,30 +60,45 @@ footer p {
     text-align: center;
 }
 
-/*
-@media screen and (min-width: 321px) {
-    .contact a {
-        margin: 0 12px;
-    }
-}
-*/
-
-@media screen and (min-width: 480px) {
-    .intro {
-        margin: 22% 0 0 0;
-    }
-    .contact a {
-        margin: 0 12px;
-    }
-
-}
-
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 320px) {
     .container {
         width: 80%;
     }
-    .intro p {
-        margin: 22% auto 0 auto;
-        width: 632px;
+}
+
+@media screen and (min-width: 480px) {
+    .intro {
+        margin: 22% auto 1% auto;
+    }
+
+    .contact a {
+        margin: 0 1%;
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+    .intro {
+        margin: 50% auto 1% auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .intro {
+        text-align: center;
+    }
+
+    .container {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .intro {
+        margin: 22% auto 1% auto;
     }
 }
