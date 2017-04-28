@@ -9,7 +9,6 @@
         <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/icon">
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}"/>
         <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700|Raleway" rel="stylesheet">
-        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
         <script src="https://use.fontawesome.com/99f582e290.js"></script>
     </head>
     <body>
@@ -18,10 +17,24 @@
             {% endblock %}
 
         </div>
+
+        <div id="mail_modal" class="modal">
+            <div class="modal_content">
+                <input type="text" class="emailText" value="me@alexjreyes.com" readonly>
+                <div class="copyBtn">
+                    <button aria-label="Copy to clipboard" data-copied-hint="Copied!" type="button">
+                        <i class="fa fa-clipboard fa-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <footer>
             <p>
                 <a href="{{ url_for('index') }}">alexjreyes.com</a> &copy;2017
             </p>
         </footer>
+
+        <script src="{{ url_for('static', filename='js/email_modal.js') }}"></script>
     </body>
 </html>
