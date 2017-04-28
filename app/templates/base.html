@@ -10,6 +10,7 @@
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}"/>
         <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700|Raleway" rel="stylesheet">
         <script src="https://use.fontawesome.com/99f582e290.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -20,9 +21,9 @@
 
         <div id="mail_modal" class="modal">
             <div class="modal_content">
-                <input type="text" class="emailText" value="me@alexjreyes.com" readonly>
+                <input type="text" value="me@alexjreyes.com" readonly>
                 <div class="copyBtn">
-                    <button aria-label="Copy to clipboard" data-copied-hint="Copied!" type="button">
+                    <button class="copyEmail" data-clipboard-text="me@alexjreyes.com" type="button">
                         <i class="fa fa-clipboard fa-lg" aria-hidden="true"></i>
                     </button>
                 </div>
