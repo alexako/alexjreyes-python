@@ -57,15 +57,16 @@ button {
     padding-top: 4px;
 }
 .contact a,
+.modal,
 .modal_content {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
 
 .modal {
-    display: none;
+    opacity: 0;
     position: fixed;
-    z-index: 1;
+    z-index: -1;
     left: 0;
     top: 0;
     width: 100%;

@@ -13,11 +13,13 @@ function notify_success() {
 }
 
 btn.onclick = function() {
-  modal.style.display = "block";
+  modal.style.opacity = 1;
+  modal.style.zIndex = 1;
 }
 
 window.onclick = function(event) {
   if (event.target == modal) {
-    modal.style.display = "none";
+    modal.style.opacity = 0;
+    modal.style.zIndex = -1;
   }
 }
