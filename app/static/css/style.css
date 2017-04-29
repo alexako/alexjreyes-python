@@ -7,7 +7,7 @@ body {
 
 body {
     /* Title font */
-    font-family: 'Libre Franklin', sans-serif;
+    /*font-family: 'Libre Franklin', sans-serif;*/
 
     /* Main font */
     font-family: 'Raleway', sans-serif;
@@ -17,6 +17,14 @@ body {
     background-color: #1e1e20;
     width: 100%;
     margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: limegreen;
 }
 
 a,
