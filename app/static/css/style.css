@@ -56,7 +56,7 @@ button {
 
 .intro {
     width: 100%;
-    margin: 15vh auto 1% auto;
+    margin: 10vh auto 1% auto;
 }
 .intro span {
     font-size: 1.1em;
@@ -177,7 +177,6 @@ footer p {
     }
 
     .intro {
-        margin: 10vh auto 1% auto;
         text-align: center;
     }
 
