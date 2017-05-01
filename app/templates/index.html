@@ -11,13 +11,16 @@
             <button id="modalBtn" class="copyEmail" data-clipboard-text="me@alexjreyes.com" alt="Copy to clipboard"><i class="fa fa-envelope fa-4x" aria-hidden="true"></i></button>
         </div>
 
-        <a id="see_more" href="#portfolio"><i class="fa fa-arrow-circle-down fa-4x" aria-hidden="true"></i></a>
+        <div id="arrow">
+            <a href="#portfolio"><i class="fa fa-arrow-circle-down fa-4x" aria-hidden="true"></i></a>
+        </div>
 
     </div>
 
 
     <div class="portfolio" id="portfolio">
         <h2>Portfolio</h2>
+        <span><i class="fa fa-codepen fa-4x" aria-hidden="true"></i></span>
         {% for pen in pens %}
         <div class="project">
             <h3>{{ pen["title"] }}</h3>
