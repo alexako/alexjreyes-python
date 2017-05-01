@@ -120,9 +120,11 @@ function colorRect(leftX, topY, width, height, drawColor) {
     canvasContext.fillRect(leftX, topY, width, height);
 }
 
+
 window.onload = function() {
     canvas = document.getElementById('gameCanvas');
     canvasContext = canvas.getContext('2d');
+    canvasContext.font="30px Monospace";
 
     var framesPerSecond = 30;
     setInterval(function() {
