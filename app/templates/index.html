@@ -10,15 +10,20 @@
             <button><a href="http://twitter.com/kludgebot/" target="_blank"><i class="fa fa-twitter fa-4x" aria-hidden="true"></i></a></button>
             <button id="modalBtn" class="copyEmail" data-clipboard-text="me@alexjreyes.com" alt="Copy to clipboard"><i class="fa fa-envelope fa-4x" aria-hidden="true"></i></button>
         </div>
+
+        <a id="see_more" href="#portfolio"><i class="fa fa-arrow-circle-down fa-4x" aria-hidden="true"></i></a>
+
     </div>
 
-    <div class="portfolio">
-        <p>Pens are below here</p>
+
+    <div class="portfolio" id="portfolio">
+        <h2>Portfolio</h2>
         {% for pen in pens %}
         <div class="project">
-            <p>A pen should be here</p>
-            <p>{{ pen["title"] }}</p>
-            <p>{{ pen["description"] }}</p>
+            <h3>{{ pen["title"] }}</h3>
+            {% autoescape false %}
+            <div class="description">{{ pen["description"] }}</div>
+            {% endautoescape %}
         </div>
         {% endfor %}
     </div>

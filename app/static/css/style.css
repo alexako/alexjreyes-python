@@ -70,12 +70,19 @@ button {
 }
 .contact a,
 .modal,
-.modal_content {
+.modal_content,
+#see_more:active {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
 
+#see_more {
+    text-align: center;
+}
+
 .portfolio {
+    width: 100%;
+    text-align: center;
 }
 
 .modal {
