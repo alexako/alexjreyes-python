@@ -1,13 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="intro">
-        <h1>Hi, I'm <span>Alex</span>. I write <span>code</span> and stuff.</h1>
-    </div>
-    <div class="contact">
-        <button><a href="http://github.com/alexako/" target="_blank"><i class="fa fa-github fa-4x" aria-hidden="true"></i></a></button>
-        <button><a href="http://twitter.com/kludgebot/" target="_blank"><i class="fa fa-twitter fa-4x" aria-hidden="true"></i></a></button>
-        <button id="modalBtn" class="copyEmail" data-clipboard-text="me@alexjreyes.com" alt="Copy to clipboard"><i class="fa fa-envelope fa-4x" aria-hidden="true"></i></button>
+    <div class="landing_page">
+        <div class="intro">
+            <h1>Hi, I'm <span>Alex</span>. I write <span>code</span> and stuff.</h1>
+        </div>
+        <div class="contact">
+            <button><a href="http://github.com/alexako/" target="_blank"><i class="fa fa-github fa-4x" aria-hidden="true"></i></a></button>
+            <button><a href="http://twitter.com/kludgebot/" target="_blank"><i class="fa fa-twitter fa-4x" aria-hidden="true"></i></a></button>
+            <button id="modalBtn" class="copyEmail" data-clipboard-text="me@alexjreyes.com" alt="Copy to clipboard"><i class="fa fa-envelope fa-4x" aria-hidden="true"></i></button>
+        </div>
     </div>
 
+    <div class="portfolio">
+        <p>Pens are below here</p>
+        {% for pen in pens %}
+        <div class="project">
+            <p>A pen should be here</p>
+            <p>{{ pen["title"] }}</p>
+            <p>{{ pen["description"] }}</p>
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}

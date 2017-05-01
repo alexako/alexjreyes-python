@@ -17,6 +17,11 @@
             {% block content %}
             {% endblock %}
 
+            <footer>
+                <p>
+                    <a href="{{ url_for('index') }}">alexjreyes.com</a> &copy;2017
+                </p>
+            </footer>
         </div>
 
         <div id="mail_modal" class="modal">
@@ -33,11 +38,6 @@
             </div>
         </div>
 
-        <footer>
-            <p>
-                <a href="{{ url_for('index') }}">alexjreyes.com</a> &copy;2017
-            </p>
-        </footer>
 
         <!-- Add route conditionals for JS resources -->
         <script src="{{ url_for('static', filename='js/email_modal.js') }}"></script>
