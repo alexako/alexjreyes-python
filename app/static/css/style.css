@@ -55,8 +55,10 @@ button {
 }
 
 .intro {
+    position: relative;
+    top: 30vh;
     width: 100%;
-    margin: 10vh auto 1% auto;
+    margin: 0 auto;
 }
 .intro span {
     font-size: 1.1em;
@@ -64,6 +66,8 @@ button {
 }
 
 .contact {
+    position: relative;
+    top: 30vh;
     text-align: center;
     padding-top: 4px;
 }
@@ -166,7 +170,6 @@ footer p {
 
     .intro {
         width: 88%;
-        margin: 4vh auto 1vh auto;
     }
 }
 
