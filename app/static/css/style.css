@@ -79,6 +79,7 @@ button {
 }
 
 #arrow {
+    display: none;
     position: absolute;
     bottom: 20vh;
     width: 100%;
@@ -162,6 +163,12 @@ footer {
 }
 footer p {
     text-align: center;
+}
+
+@media screen and (min-height: 320px) {
+    #arrow {
+        display: block;
+    }
 }
 
 @media screen and (min-height: 450px) {
