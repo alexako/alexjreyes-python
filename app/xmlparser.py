@@ -18,6 +18,6 @@ class RSS_Feed():
         return self.feed["items"]
 
     def get_pen(self, title):
-        return filter(lambda p: title in p["title"].lower(), self.feed["items"])
+        return filter(lambda p: title.lower() in p.title.lower(), self.feed["items"])
 
 
