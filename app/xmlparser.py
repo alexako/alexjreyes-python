@@ -9,10 +9,6 @@ class RSS_Feed():
         self.rss_url = rss_url
         self.feed = feedparser.parse(self.rss_url)
 
-    def get_feed(self):
-        """Returns an dict object"""
-        return self.feed
-
     def get_all_pens(self):
         """Returns a list"""
         return self.feed["items"]
