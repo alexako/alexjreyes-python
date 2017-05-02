@@ -135,6 +135,7 @@ img {
     border-radius: 8px;
 }
 .modal_content input {
+    width: 150px;
     background-color: #1e1e20;
     border: none;
     color: snow;
