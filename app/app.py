@@ -8,11 +8,11 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     resp = RSS_Feed(config.CODEPEN_URL)
-    if resp.feed.headers["status"] == "200 OK":
-        pens = resp.get_all_pens() 
-    else:
+    if resp.feed.bozo: #status != 200
         pens = [{"title": "See my portfolio at:",
             "description":"<a href='http://codepen.io/alexako'>Codepen.io</a>"}]
+    else:
+        pens = resp.get_all_pens() 
     return render_template('index.html', pens=pens)
 
 @app.route('/pong')
