@@ -1,5 +1,4 @@
 import feedparser
-import config
 
 
 class RSS_Feed():
