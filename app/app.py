@@ -1,13 +1,14 @@
 from flask import Flask, flash, redirect, render_template, request, url_for
 from xmlparser import RSS_Feed
 from pusherNotification import pusher_client
+import os
 
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    resp = RSS_Feed(config.CODEPEN_URL)
+    resp = RSS_Feed(os.environ["CODEPEN_URL"])
     if resp.feed.bozo: #status != 200
         pens = [{"title": "See my portfolio at:",
             "description":"<a href='http://codepen.io/alexako'>Codepen.io</a>"}]
