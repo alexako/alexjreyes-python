@@ -1,7 +1,6 @@
 from flask import Flask, flash, redirect, render_template, request, url_for
 from xmlparser import RSS_Feed
 from pusherNotification import pusher_client
-import config
 
 
 app = Flask(__name__)
