@@ -1,5 +1,6 @@
 from flask import Flask, flash, redirect, render_template, request, url_for
 from xmlparser import RSS_Feed
+from pusherNotification import pusher_client
 import config
 
 
@@ -13,6 +14,8 @@ def index():
             "description":"<a href='http://codepen.io/alexako'>Codepen.io</a>"}]
     else:
         pens = resp.get_all_pens() 
+    pusher_client.trigger("personal-site", "visitor",
+            {"message": "Dude, someone went to your site."})
     return render_template('index.html', pens=pens)
 
 @app.route('/pong')
