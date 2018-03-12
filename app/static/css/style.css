@@ -160,6 +160,95 @@ img {
     color: dodgerblue;
 }
 
+.kludge {
+  color: black;
+}
+
+.user {
+  font-weight: bold;
+}
+
+#chat-button {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  transform: scale(1, 1);
+  transition: 0.3s;
+  z-index: 100;
+}
+
+#chat-button span {
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+#chat-box {
+  position: fixed;
+  right: 65px;
+  bottom: 35px;
+  width: 265px;
+  max-width: 60vw;
+  max-height: 40vh;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px limegreen;
+  background-color: snow;
+  transition: 0.3s
+}
+
+#chat-box ul {
+  padding: 0;
+  max-height: 25vh;
+  overflow: scroll;
+}
+
+#chat-box li {
+  list-style: none;
+}
+
+#chat-box input#message {
+  width: calc(75% - 1em);
+  border: none;
+  background-color: #cecece;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+button[type="submit"] {
+  float: right;
+  padding: 3px 11px;
+}
+
+#connection-indicator {
+  float: right;
+  height: 10px;
+  width: 10px;
+  box-shadow: inset 1px 1px 2px black;
+  border-radius: 100%;
+  background-color: red;
+}
+
+.hide {
+  right: 0 !important;
+  opacity: 0;
+}
+
+.open {
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1) !important;
+}
+
+.connected {
+  background-color: green !important;
+}
+
 footer {
     font-size: 1.1em;
     padding: 1vh 0;

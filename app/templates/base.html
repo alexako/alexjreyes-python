@@ -13,6 +13,8 @@
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}"/>
         <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700|Raleway" rel="stylesheet">
         <script src="https://use.fontawesome.com/99f582e290.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
 	    <script>
 	      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -36,6 +38,7 @@
             </footer>
         </div>
 
+        <!-- Move to partial -->
         <div id="mail_modal" class="modal">
             <div class="modal_container">
                 <h3 class="modal_title">Email:</h3>
@@ -52,7 +55,9 @@
 
 
         <!-- Add route conditionals for JS resources -->
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
         <script src="{{ url_for('static', filename='js/email_modal.js') }}"></script>
         <script src="{{ url_for('static', filename='js/pong.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
     </body>
 </html>
