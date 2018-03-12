@@ -18,10 +18,11 @@ def index():
         pens = resp.get_all_pens() 
     return render_template('index.html', pens=pens)
 
-@socketio.on("submit vote")
-def submit_vote(vote):
-    selection = vote["selection"]
-    emit("announce vote", {"selection": selection}, broadcast=True)
+@socketio.on("submit message")
+def submit_message(data):
+    message = data["message"]
+    user = data["user"]
+    emit("response", {"user": user, "message": message}, broadcast=True)
 
 @app.route('/pong')
 def pong():

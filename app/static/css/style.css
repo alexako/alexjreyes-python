@@ -160,6 +160,14 @@ img {
     color: dodgerblue;
 }
 
+.kludge {
+  color: black;
+}
+
+.user {
+  font-weight: bold;
+}
+
 #chat-button {
   position: fixed;
   right: 10px;
@@ -193,8 +201,26 @@ img {
 }
 
 #chat-box ul {
+  padding: 0;
   max-height: 25vh;
   overflow: scroll;
+}
+
+#chat-box li {
+  list-style: none;
+}
+
+#chat-box input#message {
+  width: calc(75% - 1em);
+  border: none;
+  background-color: #cecece;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+button[type="submit"] {
+  float: right;
+  padding: 3px 11px;
 }
 
 #connection-indicator {

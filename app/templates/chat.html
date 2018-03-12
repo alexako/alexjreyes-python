@@ -1,9 +1,9 @@
 <div id="chat-box" class="hide">
   <div id="connection-indicator"></div>
   <ul id="messages">
+    <li><span class="user">kludge</span>: Hi, I'm Kludge! How are you?</li>
   </ul>
   <hr>
-  <button data-vote="yes">Yes</button>
-  <button data-vote="no">No</button>
-  <button data-vote="maybe">Maybe</button>
+  <button id="submit" type="submit">Send</button>
+  <input id="message" onkeyup="inputKeyUp(event)" />
 </div>
