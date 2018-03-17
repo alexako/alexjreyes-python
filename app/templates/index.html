@@ -1,38 +1,44 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="landing_page">
-        <div class="intro">
-            <h1>Hi, I'm <span>Alex</span>. I write <span>code</span> and stuff.</h1>
-        </div>
-        <div class="contact">
-            <button><a href="http://github.com/alexako/" target="_blank"><i class="fa fa-github fa-4x" aria-hidden="true"></i></a></button>
-            <button><a href="http://twitter.com/kludgebot/" target="_blank"><i class="fa fa-twitter fa-4x" aria-hidden="true"></i></a></button>
-            <button id="modalBtn" class="copyEmail" data-clipboard-text="me@alexjreyes.com"><i class="fa fa-envelope fa-4x" aria-hidden="true"></i></button>
-        </div>
-
-        <div id="arrow">
-            <a href="#portfolio"><i class="fa fa-arrow-circle-down fa-4x" aria-hidden="true"></i></a>
-        </div>
-
+  <div class="landing_page">
+    <div class="intro">
+      <h1>Hi, I'm <span>Alex</span>. I write <span>code</span> and stuff.</h1>
+    </div>
+    <div class="contact">
+      <button>
+        <a href="http://github.com/alexako/" target="_blank"><i class="fa fa-github fa-4x" aria-hidden="true"></i></a>
+      </button>
+      <button>
+        <a href="http://twitter.com/kludgebot/" target="_blank"><i class="fa fa-twitter fa-4x" aria-hidden="true"></i></a>
+      </button>
+      <button id="modalBtn" class="copyEmail" data-clipboard-text="me@alexjreyes.com">
+        <i class="fa fa-envelope fa-4x" aria-hidden="true"></i>
+      </button>
     </div>
 
-    <div class="portfolio">
-        <h2 id="portfolio">Portfolio</h2>
-        <span><i class="fa fa-codepen fa-4x" aria-hidden="true"></i></span>
-        {% for pen in pens %}
-        <div class="project">
-            <h3>{{ pen["title"] }}</h3>
-            {% autoescape false %}
-            <div class="description">{{ pen["description"] }}</div>
-            {% endautoescape %}
-        </div>
-        {% endfor %}
+    <div id="arrow">
+      <a href="#portfolio"><i class="fa fa-arrow-circle-down fa-4x" aria-hidden="true"></i></a>
     </div>
 
-    <div id="chat-button">
-      <span class="fa fa-comment fa-3x"></span>
-    </div>
+  </div>
 
-    {% include "chat.html" %}
+  <div class="portfolio">
+    <h2 id="portfolio">Portfolio</h2>
+    <span><i class="fa fa-codepen fa-4x" aria-hidden="true"></i></span>
+    {% for pen in pens %}
+    <div class="project">
+      <h3>{{ pen["title"] }}</h3>
+      {% autoescape false %}
+      <div class="description">{{ pen["description"] }}</div>
+      {% endautoescape %}
+    </div>
+    {% endfor %}
+  </div>
+
+  <div id="chat-button">
+    <span class="fa fa-comment fa-3x"></span>
+  </div>
+
+  {% include "chat.html" %}
 {% endblock %}
