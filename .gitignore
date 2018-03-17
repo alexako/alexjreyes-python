@@ -4,6 +4,8 @@ lib/
 local/
 venv/
 
+.sass-cache/
+
 *.pyc
 *.swp
 *.swo
