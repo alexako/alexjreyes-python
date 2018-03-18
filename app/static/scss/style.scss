@@ -96,14 +96,11 @@ small {
 }
 
 #arrow {
-  display: none;
+  display: block;
   position: absolute;
   bottom: 20vh;
   width: 100%;
   text-align: center;
-  @include breakpoint(md) {
-    display: block;
-  }
 }
 
 .modal {

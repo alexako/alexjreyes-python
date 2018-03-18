@@ -158,14 +158,11 @@ small {
   transition-duration: 0.4s; }
 
 #arrow {
-  display: none;
+  display: block;
   position: absolute;
   bottom: 20vh;
   width: 100%;
   text-align: center; }
-  @media (min-width: 992px) {
-    #arrow {
-      display: block; } }
 
 .modal {
   opacity: 0;
