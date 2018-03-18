@@ -1,10 +1,12 @@
 from flask import Flask, flash, redirect, render_template, request, url_for
+from flask_socketio import SocketIO, emit, send
 from xmlparser import RSS_Feed
-from pusherNotification import pusher_client
 import os
 
 
 app = Flask(__name__)
+
+socketio = SocketIO(app)
 
 @app.route('/')
 def index():
@@ -14,9 +16,13 @@ def index():
             "description":"<a href='http://codepen.io/alexako'>Codepen.io</a>"}]
     else:
         pens = resp.get_all_pens() 
-    pusher_client.trigger("personal-site", "visitor",
-            {"message": "Dude, someone went to your site."})
     return render_template('index.html', pens=pens)
+
+@socketio.on("submit message")
+def submit_message(data):
+    message = data["message"]
+    user = data["user"]
+    emit("response", {"user": user, "message": message}, broadcast=True)
 
 @app.route('/pong')
 def pong():
@@ -27,7 +33,8 @@ def page_not_found(error):
     return render_template('page_not_found.html'), 404
 
 def main(debug):
-    app.run(debug=debug)
+    # app.run(debug=debug)
+    socketio.run(app)
 
 if __name__ == '__main__':
     main(False)
