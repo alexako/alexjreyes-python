@@ -1,5 +1,6 @@
 BeautifulSoup==3.2.1
 Flask==0.12.1
+Flask-SocketIO==2.9.6
 Jinja2==2.9.6
 MarkupSafe==1.0
 Pygments==2.2.0
@@ -16,9 +17,12 @@ ipaddress==1.0.18
 itsdangerous==0.24
 ndg-httpsclient==0.4.2
 packaging==16.8
+pusher==1.6
 pyOpenSSL==17.0.0
 pyasn1==0.2.3
 pyparsing==2.2.0
+python-engineio==2.0.3
+python-socketio==1.9.0
 requests==2.13.0
 six==1.10.0
 urllib3==1.17
