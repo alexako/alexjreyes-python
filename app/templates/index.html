@@ -5,6 +5,7 @@
     <div class="intro">
       <h1>Hi, I'm <span>Alex</span>. I write <span>code</span> and stuff.</h1>
     </div>
+
     <div class="contact">
       <button>
         <a href="http://github.com/alexako/" target="_blank"><i class="fa fa-github fa-4x" aria-hidden="true"></i></a>
@@ -24,16 +25,21 @@
   </div>
 
   <div class="portfolio">
+
     <h2 id="portfolio">Portfolio</h2>
     <span><i class="fa fa-codepen fa-4x" aria-hidden="true"></i></span>
-    {% for pen in pens %}
-    <div class="project">
-      <h3>{{ pen["title"] }}</h3>
-      {% autoescape false %}
-      <div class="description">{{ pen["description"] }}</div>
-      {% endautoescape %}
+
+    <div id="projects">
+      {% for pen in pens %}
+      <div class="project">
+        <h3>{{ pen["title"] }}</h3>
+        {% autoescape false %}
+        <div class="description">{{ pen["description"] }}</div>
+        {% endautoescape %}
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
+
   </div>
 
   <div id="chat-button">
