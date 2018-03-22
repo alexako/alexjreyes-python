@@ -1,26 +1,20 @@
 @import "variables";
 @import "mixins";
-
-
 // Chat window
 @import "chat-window";
-
 // Portfolio
 @import "portfolio";
 
-
-html,
-body {
+body,
+html {
   height: 100vh;
 }
 
 body {
   /* Title font */
   /*font-family: 'Libre Franklin', sans-serif;*/
-
   /* Main font */
   font-family: 'Raleway', sans-serif;
-
   font-size: 16px;
   color: $green;
   background-color: #1e1e20;
@@ -32,14 +26,16 @@ body {
   width: 0;
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background: $green;
 }
 
-a,
-#modalBtn {
+#modalBtn,
+a {
   color: $green;
   text-decoration: none;
+
   &:hover {
     color: dodgerblue;
   }
@@ -73,9 +69,11 @@ small {
   top: 10vh;
   width: 100%;
   margin: 0 auto;
+
   h1 {
     text-align: center;
   }
+
   span {
     font-size: 1.1em;
     color: snow;
@@ -88,6 +86,7 @@ small {
   text-align: center;
   padding-top: 4px;
 }
+
 .contact a,
 .modal,
 .modal_content {
@@ -115,15 +114,18 @@ small {
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.6);
 }
+
 .modal_container {
   width: 298px;
   margin: 40vh auto;
 }
-.modal_title{
+
+.modal_title {
   float: left;
   margin: 0 1%;
   padding: 0.3em;
 }
+
 .modal_content {
   display: table;
   margin: 0 auto;
@@ -131,6 +133,7 @@ small {
   border: 2px solid $green;
   border-radius: 8px;
 }
+
 .modal_content input {
   width: 150px;
   background-color: #1e1e20;
@@ -145,8 +148,10 @@ small {
   float: right;
   border-left: 1px solid $green;
   padding-left: 0.3em;
+
   button {
     color: $green;
+
     &:hover {
       color: dodgerblue;
     }
@@ -174,8 +179,8 @@ footer {
   font-size: 1.1em;
   padding: 1vh 0;
   width: 100%;
+
   p {
     text-align: center;
   }
 }
-

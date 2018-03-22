@@ -1,63 +1,72 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Uh, yeah... I'm Alex Reyes and this is my playground.">
-    <meta name="theme-color" content="limegreen">
-    <meta name="msapplication-navbutton-color" content="limegreen">
-    <meta name="apple-mobile-web-app-status-bar-style" content="limegreen">
-    <title>Alexako</title>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/icon">
-    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/icon">
-    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}"/>
-    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700|Raleway" rel="stylesheet">
-    <script src="https://use.fontawesome.com/99f582e290.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
-    <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-98463224-1', 'auto');
-ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <div class="container">
-      {% block content %}
-      {% endblock %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Uh, yeah... I'm Alex Reyes and this is my playground.">
+  <meta name="theme-color" content="limegreen">
+  <meta name="msapplication-navbutton-color" content="limegreen">
+  <meta name="apple-mobile-web-app-status-bar-style" content="limegreen">
+  <title>Alexako</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/icon">
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/icon">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}" />
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700|Raleway" rel="stylesheet">
+  <script src="https://use.fontawesome.com/99f582e290.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-      <footer>
-        <p>
+    ga('create', 'UA-98463224-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    {% block content %} {% endblock %}
+
+    <footer>
+      <p>
         <a href="{{ url_for('index') }}">alexjreyes.com</a> &copy;2017
-        </p>
-      </footer>
-    </div>
+      </p>
+    </footer>
+  </div>
 
-    <!-- Move to partial -->
-    <div id="mail_modal" class="modal">
-      <div class="modal_container">
-        <h3 class="modal_title">Email:</h3>
-        <div class="modal_content">
-          <input type="text" value="me@alexjreyes.com" readonly>
-          <div class="copyBtn">
-            <button class="copyEmail" data-clipboard-text="me@alexjreyes.com" type="button">
+  <!-- Move to partial -->
+  <div id="mail_modal" class="modal">
+    <div class="modal_container">
+      <h3 class="modal_title">Email:</h3>
+      <div class="modal_content">
+        <input type="text" value="me@alexjreyes.com" readonly>
+        <div class="copyBtn">
+          <button class="copyEmail" data-clipboard-text="me@alexjreyes.com" type="button">
               <i class="fa fa-clipboard fa-lg" aria-hidden="true"></i>
             </button>
-          </div>
         </div>
       </div>
     </div>
+  </div>
 
 
-    <!-- Add route conditionals for JS resources -->
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/email_modal.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/pong.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
-  </body>
+  <!-- Add route conditionals for JS resources -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/email_modal.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/pong.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+
 </html>
