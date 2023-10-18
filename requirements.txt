@@ -3,7 +3,7 @@ Flask==2.2.5
 Flask-SocketIO==2.9.6
 Jinja2==2.11.3
 MarkupSafe==1.0
-Pygments==2.7.4
+Pygments==2.15.0
 Werkzeug==2.2.3
 argparse==1.2.1
 asn1crypto==0.22.0
